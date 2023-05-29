@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sentiment Analysis</title>
+    <style>
+         body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+        background-image: url("https://plus.unsplash.com/premium_photo-1683690944962-2627f6d2e0d4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80");
+        background-size: cover; /* Updated background-size values */
+        background-repeat: no-repeat;
+       
+    }
+        h1 {
+        margin-bottom: 20px;
+        text-align: center;
+        color: rgb(0, 0, 0);
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    textarea {
+        width: 50%;
+        resize: vertical;
+        min-width: 300px;
+        text-align: center;
+    }
+
+    input[type="submit"] {
+        background-color: #4CAF50;
+        color: white;
+        padding: 12px 24px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    input[type="submit"]:hover {
+        background-color: #bee0bf;
+
+    
+    }
+</style>
+
+    </style>
+</head>
+<body>
+    <h1>Enter Comment</h1>
+    <form action="/predict" method="post">
+        <textarea name="comment" rows="5" cols="50"></textarea><br><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

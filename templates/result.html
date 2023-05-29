@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sentiment Analysis Result</title>
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            text-align: center; /* Add this line to align the content in the center */
+            background-image: url("https://plus.unsplash.com/premium_photo-1683690944962-2627f6d2e0d4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"); /* Replace "path/to/your/image.jpg" with the actual path to your image */
+            background-size: 100% auto;
+
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            text-align: center; /* Add this line to align the heading in the center */
+            
+        }
+
+        p {
+            margin-bottom: 10px;
+            text-align: center; /* Add this line to align the paragraph in the center */
+          
+        }
+
+        strong {
+            font-weight: bold;
+            display: inline-block; /* Add this line to display the <strong> element as an inline-block */
+            text-align: center; /* Add this line to align the <strong> element in the center */
+            margin: 0 auto; /* Add this line to horizontally center the <strong> element */
+           
+        }
+    </style>
+</head>
+<body>
+    <h1> Sentiment Analysis </h1>
+    <p><strong>Comment:</strong> {{ comment }}</p>
+    <p><strong>Sentiment:</strong> {{ sentiment }}</p>
+    {% if sentiment == 'positive ' %}
+        <img src="https://cliply.co/wp-content/uploads/2021/03/392103580_BLUSHING_EMOJI_400px.gif" alt="Positive GIF">
+    {% elif sentiment == 'negative ' %}
+        <img src="https://cliply.co/wp-content/uploads/2021/03/392103840_SAD_EMOJI_WITH_TEAR_400px.gif" alt="Negative GIF">
+    {% elif sentiment == 'neutral ' %}
+        <img src="https://cliply.co/wp-content/uploads/2021/03/392103390_SAD_EMOJI_400px.gif" alt="Neutral GIF">
+    {% endif %}
+</body>
+</html>
